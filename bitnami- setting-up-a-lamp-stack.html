@@ -27,7 +27,7 @@ $ composer global require drush/drush:dev-master</p>
 <p><strong>Tip:</strong> The best method for moving your files from Drupal to your test site is by using Git to download the files right into your Bitnami home folder and then moving the whole directory and files into the root directory fo your server. If you must FTP from the host machine into your Bitnami VM, tt is immensely faster to copy the compressed file over to the Bitnami VM and then uncompress once it has arrived rathe than decompressing and FTPing the files.  </p>
 <p>Once you have copied the files over, uncompress them and move them to /opt/bitnami/apache2/htdocs/drupal</p>
 <p>Next you need to do some permissions things to allow apache to install the Drupal site.</p>
-<p>sudo chown bitnami:daemon -R /opt/bitnami/apache2/htdocs/drupal</p>
+<p>$ sudo chown bitnami:daemon -R /opt/bitnami/apache2/htdocs/drupal</p>
 <p>Then you need to use MySQL to create the database</p>
 <p>Then you can install Drupal and start working with it.</p>
 
