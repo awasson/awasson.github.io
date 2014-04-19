@@ -24,7 +24,7 @@ $ composer global require drush/drush:dev-master</p>
 
 <h2>INSTALLING DRUPAL</h2>
 <p>After following the instruction on setting up VirtualBox and the Bitnami LAMP stack and then installing the Guest Additions and getting SSH hooked up, you’ll use SFTP to connect to the bitnami VM and copy over the Drupal files. You’ll need to chmod some directory within your home directory within your bitnami VM to alloy the SFTP client to transfer files. </p>
-<p><strong>Tip:</strong> It is immensely faster to copy the compressed file over to the Bitnami VM and then uncompress once it has arrived rathe than decompressing and FTPing the files.  </p>
+<p><strong>Tip:</strong> The best method for moving your files from Drupal to your test site is by using Git to download the files right into your Bitnami home folder and then moving the whole directory and files into the root directory fo your server. If you must FTP from the host machine into your Bitnami VM, tt is immensely faster to copy the compressed file over to the Bitnami VM and then uncompress once it has arrived rathe than decompressing and FTPing the files.  </p>
 <p>Once you have copied the files over, uncompress them and move them to /opt/bitnami/apache2/htdocs/drupal</p>
 <p>Next you need to do some permissions things to allow apache to install the Drupal site.</p>
 <p>sudo chown bitnami:daemon -R /opt/bitnami/apache2/htdocs/drupal</p>
