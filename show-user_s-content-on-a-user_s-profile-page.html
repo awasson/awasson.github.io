@@ -1,0 +1,30 @@
+<h1>How to show user's content on a user's profile page</h1>
+
+<p>Views does this out of the box.</p>
+
+<ol>
+<li>Create a view of whatever content it is that you want to expose and make it a block.</li>
+
+<li>Then, in the advanced (right) side add a <u>Contextual Filter</u> of the type "Content: Author uid" . The settings are a little complicated. 
+  <ul>
+    <li>The filter will tell you that you must add a default value:<br/>
+    <em>"This display does not have a source for contextual filters, so no contextual filter value will be available unless you select 'Provide default'."</em></li>
+    <li>So below where it says: "When the filter value is NOT available" click the radio button that says "provide default value" and from the drop down list select User ID from URL.</li>
+    <li>Under "When the filter value IS available or a default is provided" select: "Specify validation criteria"</li>
+    <li>the Validator will be: "User"</li>
+    <li>check the radio button for: "Allow both numeric UIDs and string usernames"</li>
+    <li>Under: "Action to take if filter value does not validate" select: "Hide view".</li>
+  </ul>
+  </li>
+</ol>
+
+
+<h3>SAVE YOUR VIEW, YOU'RE DONE WITH THE VIEW</h3>
+
+<p>Go to Blocks and configure the block so that it shows in the region you want it to show up in and set it to Show block on specific pages -> Only the listed pages:<br/>
+user<br/>
+user/*<br/>
+users/*<br/>
+<p>
+
+<h3>NOW YOU'RE DONE, GO ENJOY YOUR RESULTS. </h3>
